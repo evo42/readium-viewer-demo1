@@ -1,0 +1,11 @@
+<FilesMatch "\.(htm|html|xhtml)$">
+	SetHandler application/x-httpd-php
+
+	php_value auto_prepend_file "/<ABSOLUTE>/<PATH>/<TO>/readium-viewer-demo1/epub_content/app-prepend.php"
+	php_value auto_append_file "/<ABSOLUTE>/<PATH>/<TO>/readium-viewer-demo1/epub_content/app-append.php"
+
+	# turn on / off error reporting
+	# http://www.php.net/manual/en/errorfunc.constants.php
+	#php_value error_reporting 32767
+	#php_value display_errors 1
+</FilesMatch>
